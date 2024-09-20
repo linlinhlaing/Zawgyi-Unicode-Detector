@@ -10,7 +10,8 @@ function classifyText(text) {
 }
 
 // Event listener for Detect button
-document.getElementById('detect-btn').addEventListener('click', function() {
+document.getElementById('detect-btn').addEventListener('click', function(event) {
+    event.preventDefault(); 
     const textInput = document.getElementById('text-input').value.trim();
 
     if (textInput === '') {
