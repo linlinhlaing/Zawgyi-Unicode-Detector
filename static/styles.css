@@ -1,0 +1,143 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-section, .output-section, .file-upload-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+    resize: none;
+    margin-top: 10px;
+    height: 120px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.button-section {
+    text-align: center;
+}
+
+#detect-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#detect-btn:hover {
+    background-color: #0056b3;
+}
+
+.output-section .output-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.output-section label {
+    font-size: 14px;
+    color: #555;
+}
+
+.output-box p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.file-upload-section input[type="file"] {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+#clear-btn {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#clear-btn:hover {
+    background-color: #c82333;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #777;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
