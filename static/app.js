@@ -1,37 +1,12 @@
-function classifyText(text) {
-    // This is just a simulation. Replace with actual model classification logic.
-    const zawgyiProbability = Math.random(); // Generates a random probability for demonstration
-    
-    if (zawgyiProbability > 0.5) {
-        return { encoding: 'Zawgyi', confidence: (zawgyiProbability * 100).toFixed(2) + '%' };
-    } else {
-        return { encoding: 'Unicode', confidence: ((1 - zawgyiProbability) * 100).toFixed(2) + '%' };
-    }
+
+// Clear the input and result boxes
+function clearFields() {
+    document.getElementById('text-input').value = '';  // Clear the text input
+    document.getElementById('result-box').textContent = 'Encoding: ';  // Reset result box
+    document.getElementById('confidence-box').textContent = 'Confidence: ';  // Reset confidence box
 }
 
-// Event listener for Detect button
-document.getElementById('detect-btn').addEventListener('click', function(event) {
-    event.preventDefault(); 
-    const textInput = document.getElementById('text-input').value.trim();
+// Add event listener for the clear button
+document.getElementById('clear-btn').addEventListener('click', clearFields);
 
-    if (textInput === '') {
-        alert('Please enter some text to classify.');
-        return;
-    }
-
-    // Call the classifyText function
-    const result = classifyText(textInput);
-
-    // Update the UI with the result
-    document.getElementById('result-box').textContent = result.encoding;
-    document.getElementById('confidence-box').textContent = result.confidence;
-});
-
-// Event listener for Clear button
-document.getElementById('clear-btn').addEventListener('click', function() {
-    // Clear the text input and result fields
-    document.getElementById('text-input').value = '';
-    document.getElementById('result-box').textContent = '[Result will appear here]';
-    document.getElementById('confidence-box').textContent = '[Confidence Score]';
-    window.location.href = '/';
-});
+document.getElementById('detect-btn').addEventListener('click', classifyText);
