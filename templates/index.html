@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zawgyi or Unicode Detector</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,29 +15,29 @@
         </header>
 
         <main>
-            <div class="input-section">
-                <label for="text-input">Enter Text:</label>
-                <textarea id="text-input" placeholder="Type or paste your Myanmar text here..."></textarea>
-            </div>
+            <form action="/classify" method="POST">
+                <div class="input-section">
+                    <label for="text-input">Enter Text:</label>
+                    <textarea id="text-input" name="text-input" placeholder="Type or paste your Myanmar text here..." required></textarea>
+                </div>
 
-            <div class="button-section">
-                <button id="detect-btn">Detect</button>
-            </div>
+                <div class="button-section">
+                    <button type="submit" id="detect-btn">Detect</button>
+                    <button type="button" id="clear-btn">Clear</button>
+                </div>
+            </form>
 
             <div class="output-section">
                 <div class="output-box">
                     <label>Detected Encoding:</label>
-                    <p id="result-box">[Result will appear here]</p>
+                    <!-- <p id="result-box">[Result will appear here]</p> -->
+                    <p id="result-box">{{ result }}</p>
                 </div>
                 <div class="output-box">
                     <label>Confidence Score:</label>
-                    <p id="confidence-box">[Confidence Score]</p>
+                    <!-- <p id="confidence-box">[Confidence Score]</p> -->
+                    <p id="confidence-box">{{ confidence }}</p>
                 </div>
-            </div>
-
-
-            <div class="reset-section">
-                <button id="clear-btn">Clear</button>
             </div>
         </main>
 
@@ -46,6 +46,6 @@
         </footer>
     </div>
 
-    <script src="app.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>
