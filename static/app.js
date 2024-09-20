@@ -32,4 +32,5 @@ document.getElementById('clear-btn').addEventListener('click', function() {
     document.getElementById('text-input').value = '';
     document.getElementById('result-box').textContent = '[Result will appear here]';
     document.getElementById('confidence-box').textContent = '[Confidence Score]';
+    window.location.href = '/';
 });
