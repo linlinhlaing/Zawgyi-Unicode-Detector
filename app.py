@@ -10,10 +10,9 @@ def home():
 @app.route('/classify', methods=['POST'])
 def classify():
     try:
-        # data = request.json
         input_text = request.form['text-input']
 
-        # Replace this logic with your actual model prediction logic
+        # Replace this logic with your actual model classification logic
         if input_text:  # Ensure that input_text is not empty
             encoding = 'Zawgyi'  # Dummy response for encoding
             confidence = 85.0     # Dummy confidence score
