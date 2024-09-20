@@ -83,7 +83,10 @@ textarea:focus {
 #detect-btn:hover {
     background-color: #0056b3;
 }
-
+#detect-btn:active, #clear-btn:active {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
 .output-section .output-box {
     background-color: #f9f9f9;
     padding: 15px;
