@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zawgyi or Unicode Detector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Zawgyi or Unicode Detector</h1>
+            <p>Identify whether the input text is Zawgyi or Unicode quickly and easily.</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="text-input">Enter Text:</label>
+                <textarea id="text-input" placeholder="Type or paste your Myanmar text here..."></textarea>
+            </div>
+
+            <div class="button-section">
+                <button id="detect-btn">Detect</button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-box">
+                    <label>Detected Encoding:</label>
+                    <p id="result-box">[Result will appear here]</p>
+                </div>
+                <div class="output-box">
+                    <label>Confidence Score:</label>
+                    <p id="confidence-box">[Confidence Score]</p>
+                </div>
+            </div>
+
+
+            <div class="reset-section">
+                <button id="clear-btn">Clear</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by <strong>Lin Lin Hlaing</strong> | <a href="https://linlinhlaing.com/">About</a></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
