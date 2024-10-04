@@ -1,1 +1,1 @@
-This project is a web-based application that helps classify Myanmar text as either Zawgyi or Unicode encoding.
+This is a practice project that demonstrates a Flask application using a trained model to detect whether input text is Unicode or Zawgyi.
