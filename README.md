@@ -1,5 +1,7 @@
+### Summary
 This is a practice project that demonstrates a Flask application using a trained model to detect whether input text is Unicode or Zawgyi.
-## Results
+
+### Results
 
 <p>This is the Unicode result.</p>
 <div style="text-align: left;">
